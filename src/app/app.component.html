@@ -1,0 +1,17 @@
+<ul>
+  @for (aluno of ALUNOS; track aluno.matricula) {
+  <li>
+    {{ aluno.matricula }} - {{ aluno.nome }} -
+    <button (click)="remover(aluno)">X</button>
+  </li>
+  }
+</ul>
+
+<input [(ngModel)]="alunoDeCadastro.nome" placeholder="nome" />
+<input [(ngModel)]="alunoDeCadastro.matricula" placeholder="matrícula" />
+<input [(ngModel)]="alunoDeCadastro.idade" placeholder="idade" />
+<button (click)="cadastrar()">Cadastrar</button>
+
+<h2>O que está sendo digitado?</h2>
+<div>{{ alunoDeCadastro.nome }}</div>
+<p>{{ aluno }}</p>
